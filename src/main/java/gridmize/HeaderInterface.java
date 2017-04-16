@@ -4,10 +4,10 @@ import org.openqa.selenium.By;
 
 public interface HeaderInterface {
 
-	public By getActionSelector();
+	By getActionSelector();
 	
-	public String getColumnName();
+	String getColumnName();
 	
-	public Integer getColumnIndex();
+	Integer getColumnIndex();
 	
 }

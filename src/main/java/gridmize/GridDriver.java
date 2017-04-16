@@ -2,12 +2,12 @@ package gridmize;
 
 import org.openqa.selenium.WebDriver;
 
-public class Driver {
+public class GridDriver {
 
 	private static WebDriver webDriver;
 
 	public static void set(WebDriver driver) {
-		Driver.webDriver = driver;
+		GridDriver.webDriver = driver;
 	}
 	
 	public static WebDriver get() {
