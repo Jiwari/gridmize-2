@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.jiwari</groupId>
     <artifactId>gridmize-2</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
 
     <name>Gridmize 2</name>
     <description>Selenium WebDriver helper to search and use web grids</description>
