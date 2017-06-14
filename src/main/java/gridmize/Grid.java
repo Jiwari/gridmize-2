@@ -89,7 +89,7 @@ public class Grid<T extends HeaderInterface> {
     /**
      * Returns a list of all rows displayed on the grid.
      *
-     * @return {@link List}<{@link Row}{@code <T>>}
+     * @return List of Rows representing all rows of this grid
      */
     public List<Row<T>> getRows() {
         List<WebElement> webElementRows = GridDriver.get().findElement(tableSelector)

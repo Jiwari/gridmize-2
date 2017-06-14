@@ -23,7 +23,7 @@ public class Row<T extends HeaderInterface> {
 	/**
 	 * Returns a list that represents the columns of this row.
 	 * 
-	 * @return
+	 * @return A list of cells that represent the column of this row.
 	 */
 	public List<Cell<T>> getColumns() {
 		List<WebElement> webElementColumns = webElementRow.findElements(columnSelector);
@@ -60,7 +60,7 @@ public class Row<T extends HeaderInterface> {
 	 * Returns a specific column of this row.
 	 * 
 	 * @param header
-	 * @return {@link Cell}<T>
+	 * @return The requested column of this row.
 	 */
 	public Cell<T> getColumn(T header) {
 		List<Cell<T>> cells = getColumns();
