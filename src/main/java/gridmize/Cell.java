@@ -19,4 +19,8 @@ public class Cell<T extends HeaderInterface> {
 			return webElementColumn.findElement(headerColumn.getActionSelector());
 		}
 	}
+
+	public T getHeaderColumn() {
+		return headerColumn;
+	}
 }
