@@ -77,6 +77,8 @@ public class Grid<T extends HeaderInterface> {
     /**
      * Verifies if the names on T from {@code getColumnName} are the same of the
      * elements displayed on the page.
+     *
+     * @param ignoreCase Whether should ignore case or not
      */
     public void verifyHeaderNames(boolean ignoreCase) {
         List<WebElement> headerElements = GridDriver.get().findElement(tableSelector)
