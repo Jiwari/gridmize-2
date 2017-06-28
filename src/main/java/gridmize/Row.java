@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import gridmize.exceptions.GridmizeException;
 import org.openqa.selenium.By;
@@ -30,8 +31,13 @@ public class Row<T extends HeaderInterface> {
         List<WebElement> webElementColumns = webElementRow.findElements(columnSelector);
         List<Cell<T>> cell = new ArrayList<>();
 
-        for (T headerColumn : headerEnums) {
-            cell.add(new Cell<T>(webElementColumns.get(headerColumn.getColumnIndex()), headerColumn));
+        for (int index = 0; index < webElementColumns.size(); index++) {
+            WebElement element = webElementColumns.get(index);
+            final int i = index;
+            List<T> headersNovos = Arrays.stream(headerEnums)
+                    .filter(h -> h.getColumnIndex().equals(i))
+                    .collect(Collectors.toList());
+            headersNovos.forEach(h -> cell.add(new Cell<T>(element, h)));
         }
 
         return cell;
